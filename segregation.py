@@ -1,54 +1,92 @@
 
+'''
+a library to implement the indexes described here: 
+    http://www.census.gov/hhes/www/housing/resseg/pdf/app_b.pdf
+
+homepage: https://github.com/ExploringIdeasEU/segregation
+'''
+
 
 import numpy
 
 class Eveness(object):
-    def dissimilarity(x,t):
-        raise NotImplemented
 
+    @staticmethod
+    def dissimilarity():
+        raise NotImplementedError()
+
+    @staticmethod
     def Gini():
-        raise NotImplemented
+        raise NotImplementedError()
 
-    def entropy(x,t):
-        raise NotImplemented
+    @staticmethod
+    def entropy():
+        raise NotImplementedError()
 
+    @staticmethod
     def Atkinson():
-        raise NotImplemented
+        raise NotImplementedError()
 
 class Exposure(object):
-    def interaction(x,y,t):
-        raise NotImplemented
-    def isolation(x,t):
-        raise NotImplemented
-    def correlation(x,t):
-        raise NotImplemented
+
+    @staticmethod
+    def interaction():
+        raise NotImplementedError()
+
+    @staticmethod
+    def isolation():
+        raise NotImplementedError()
+
+    @staticmethod
+    def correlation():
+        raise NotImplementedError()
 
 class Concentration(object):
+
+    @staticmethod
     def delta():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def absolute():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def relative():
-        raise NotImplemented
+        raise NotImplementedError()
 
 class Centralization(object):
+
+    @staticmethod
     def absolute():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def relative():
-        raise NotImplemented
+        raise NotImplementedError()
 
 
 class Clustering(object):
+
+    @staticmethod
     def absolute():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def relative():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def spatial_proximity():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def distance_decay_interaction():
-        raise NotImplemented
+        raise NotImplementedError()
+
+    @staticmethod
     def distance_decay_isolation():
-        raise NotImplemented
+        raise NotImplementedError()
 
 
 
