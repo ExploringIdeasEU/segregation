@@ -31,7 +31,7 @@ ai   :the land area of area i
 A   :the sum of all ai (the total land area)
 '''
 
-import numpy
+import numpy as np
 
 class Eveness(object):
 
@@ -160,8 +160,21 @@ class Centralization(object):
 class Clustering(object):
 
     @staticmethod
-    def absolute():
-        raise NotImplementedError()
+    def absolute(X, T,D):
+        '''
+        input: X,T,D
+             xi: minority population in area i
+             ti: total population in area i
+            dij: distance between area i and area j centroids
+                and d_ii = sqrt(0.6 * ai)
+                where ai: land area of area i
+        '''
+        C = np.exp(-D)
+        part0 = (np.sum(X) / X.shape[0] ** 2)*np.sum(C)
+        part1 = np.sum(X * np.dot(C, X)) / np.sum(X)
+        part2 = np.sum(X * np.dot(C, T)) / np.sum(X)
+        return (part1 - part0) / (part2 - part0)
+
 
     @staticmethod
     def relative():
