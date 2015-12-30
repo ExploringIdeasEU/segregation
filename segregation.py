@@ -137,7 +137,7 @@ class Centralization(object):
         return index / ( Xi[-1] * Ai[-1] )
 
     @staticmethod
-    def relative():
+    def relative(pair):
         '''
         input: pair: pair = (xi, yi, di)
             xi: minority population in area i 
